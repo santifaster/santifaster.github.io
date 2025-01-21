@@ -1,0 +1,17 @@
+
+:root{
+    /* Colors */
+    --main-pink: #ca054d;
+    --main-blue: #348aa7;
+    --black-bg: #2B2B2B;
+
+    --dark-black: #18181a;
+    --white-text: #b1b2b5;
+    --links: #44A5C5;
+    --pink-text: #F92472;
+    
+
+    /* Paddings */
+    --top-bar-height: 80px;
+    --side-bar-width: 128px;
+}

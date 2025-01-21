@@ -1,0 +1,34 @@
+.game_grid{
+    display: grid;
+
+    grid-template-columns: repeat( auto-fill, minmax(315px,1fr));
+    gap: 32px;
+    
+    /*background-color:#348aa7;*/
+
+    max-width: 1024px;
+    margin: 0 auto;
+    /*transform: rotate(-2deg);*/
+}
+
+.game_cell{
+    max-width: 315px;
+    margin: 0 auto;
+    width: auto;
+    height: auto;
+}
+
+.cell_title > a {
+    color: var(--links);
+    font-size: large;
+    text-decoration: none;
+}
+
+.cell_description {
+    color: var(--pink-text);
+    text-decoration: none;
+}
+
+.cell_thumbnail > a > img{
+    border-radius: 16px;
+}

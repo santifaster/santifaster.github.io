@@ -1,0 +1,245 @@
+@font-face{
+    font-family:"ubuntu-r"; 
+    src: url(../fonts/Ubuntu-R.ttf);
+}
+
+:root{
+    /* Colors */
+    --main-pink: #ca054d;
+    --main-blue: #348aa7;
+    --black-bg: #2B2B2B;
+
+    --dark-black: #18181a;
+    --white-text: #b1b2b5;
+    --links: #44A5C5;
+    --pink-text: #F92472;
+    --white-text-highlight: #dddfe2; 
+    
+
+    /* Paddings */
+    --top-bar-height: 80px;
+    --side-bar-width: 128px;
+}
+
+*{  
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "ubuntu-r";
+    letter-spacing: 1px;
+    color: var(--white-text);
+}
+
+a {
+    color: var(--links);
+}
+
+body {
+    background-color: var(--dark-black);
+
+    width: 100%;
+    height: 100vh;
+
+    display: grid;
+    grid-template-rows: var(--top-bar-height) auto;
+    grid-template-columns: var(--side-bar-width) auto;
+}
+
+@media (width < 768px){
+    body{
+        grid-template-columns: 0vw 100vw;
+    }
+    .side_title{
+        content-visibility: hidden;
+    }
+    .logo{
+        content-visibility: hidden;
+    }
+    .menu > ul {
+        gap: 8px
+    }
+    .menu > ul > li{
+        padding: 2px 4px;
+    }
+    .menu > ul > li > a{
+        font-size: 24px;
+    }
+}
+
+/* C O N T E N T */
+
+.page_content {
+    padding: 32px;
+
+    position: relative;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+    
+    border-radius: 32px 0 0 0;
+    border-top: 8px solid var(--main-pink);
+    border-left: 8px solid var(--main-pink);
+    
+    /*box-sizing: border-box;*/
+    
+    /*Tiling rotated background*/
+    /*https://www.sitepoint.com/css3-transform-background-image/*/
+    /*https://codepen.io/SitePoint/pen/Ngpvwx*/
+
+    background-color: var(--black-bg);
+    background-image: url(../img/grid.svg);
+    background-size: /*calc(300px - 5vw)*/ 128px ;
+    animation: 10s linear infinite bg_anim;
+    
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .page_content{
+        animation: none;
+    }
+}
+
+/*.background_container{
+    position:absolute;
+
+    width: calc(100% + 32px);
+
+    top: -32px;
+    left: -32px;
+    
+    /*overflow: hidden;
+}*/
+
+/*.background{
+    
+    background-color: var(--black-bg);
+    background-image: url(../img/grid.svg);
+    background-size: calc(300px - 5vw) ;
+    animation: 500s linear infinite bg_anim;
+
+    width: 200%;
+    Esto está bastante feo
+    height: 1000%;
+
+    position:absolute;
+    top: -50vh;
+    left: -50vw;
+    z-index: -1;
+
+    transform: rotate(5deg);
+}*/
+
+@keyframes bg_anim {
+    from {
+        /*background-position: left bottom;*/
+        background-position-x: -256px;
+        background-position-y: 256px;
+    }
+
+    to {
+        /*background-position: right top;*/
+        background-position-x: 0px;
+        background-position-y: 0px;
+    }
+}
+
+/* M E N U */
+
+.menu{
+    display: flex;
+    align-items: center;
+    top: 0px;
+}
+
+.menu > ul{
+    width: 100%;
+    height: 5em;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    gap: 16px;
+}
+
+.menu > ul > li{
+    padding: 4px 8px;
+    list-style: none;
+    transition-duration: 0.1s;
+    font-size: 30px;
+
+    border-radius: 16px 16px 0 0;
+}
+
+.menu > ul > li > a{
+    text-decoration: none;
+}
+
+.menu_list{
+    letter-spacing: 0.3vw;
+    color: var(--white-text);
+}
+
+.menu_list:hover{
+    /*cursor: wait;*/
+    /*background-color: var(--main-blue);*/
+    border-bottom: 8px solid var(--main-blue);
+    color: aliceblue;
+    transition-duration: 0.1s;
+}
+
+/* S I D E   B A R */
+
+.side_bar{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 16px 16px 32px 16px;
+}
+
+.side_title{
+    transform: rotate(180deg);
+    writing-mode: vertical-lr;
+    font-size: 64px;
+}
+
+/*.anim{
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: .10em;
+
+    animation: typing 1s steps(9);
+}
+
+@keyframes typing {
+    from {
+        height: 0;
+    }
+
+    to {
+        height: 100%;
+    }
+}*/
+
+/* L O G O*/
+
+.logo{
+    align-self: center;
+    justify-self: center;
+}
+
+.logo > a > img{    
+    width: 64px;   
+    /*display: block;*/
+}
+
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 64px;
+    gap: 32px;
+}
+
+footer > a > img{
+    width: 32px;
+}
