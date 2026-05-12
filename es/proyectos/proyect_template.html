@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>{{ title }}</title>
+    <meta charset="UTF-8">
+    <link href="../../img/LogoSanti.svg" rel="icon" type="image/svg">
+    <link href="../../css/styles.css" rel="stylesheet" type="text/css">
+    <link href="../../css/presentacion_proyecto.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <div class="logo">
+        <a href="../../index.html"><img src="../../img/LogoSanti.svg" class="image" alt="Inicio"></a>
+    </div>
+    <div class="menu">
+        <ul>
+            <li><a href="../../index.html">
+                    <div class="menu_list">Proyectos</div>
+                </a></li>
+
+            <li><a href="../../galeria.html">
+                    <div class="menu_list">Galería</div>
+                </a></li>
+
+            <li><a href="../../acerca_de.html">
+                    <div class="menu_list">Acerca de</div>
+                </a></li>
+        </ul>
+    </div>
+    <div class="side_bar">
+        <div class="side_title">
+            {{ sidebar-title }}
+        </div>
+    </div>
+    <div class="page_content">
+        <div class="background_container">
+            <div class="background"></div>
+        </div>
+        <!-- Introducir contenido aquí -->
+        <div class="banner">
+            <img src="../../img/captura_rotato.png" alt="Captura de Rotato">
+        </div>
+        <div class="content">
+            <div class="project">
+                <h1>{{ title }}</h1>
+                <div id="tags">
+                    <h2>Puesto</h2> {%- for tag in collections.job-tags -%}<li>{{ tag }}</li>{%- endfor -%}
+                </div>
+                <div class="about_project">
+                    <div class="about_project_text">
+                        {{ content }}
+                    </div>
+                    <img src="{{ cover-src }}" id="cover" alt="TODO">
+                </div>
+                <h2>Encargos</h2>
+                {%- for work in collections.works -%}
+                <h3>{{ work.name }}</h3>
+                    <p>{{ work.content }}</p>
+                    <div class="image_set">
+                        {%- for image in work.images -%}
+                        <img src="{{ image.src }}" alt="{{ image.alt }}">
+                    </div>
+                {%- endfor -%}
+                <h3>Sponch</h3>
+                <div class="image_set">
+                    <img src="../../img/fortnite/sponch_zones.png" alt="TODO">
+                    <img src="../../img/fortnite/weapon_spots_capture.png" alt="TODO">
+                </div>
+                <h3>La isla Infojobs</h3>
+                <h3>BINAES</h3>
+            </div>
+        </div>
+
+        <footer>
+            <a href="mailto:santifaster@gmail.com"><img src="../../img/mail_icon.svg" alt="Mail link"></a>
+            <a href="https://mastodon.gamedev.place/@San_tiDev"><img src="../../img/mastodon_icon.svg"
+                    alt="Mastodon link"></a>
+            <a href="https://san-tidev.itch.io/"><img src="../../img/itchio_icon.svg" alt="Itch.io link"></a>
+        </footer>
+    </div>
+</body>
+
+</html>

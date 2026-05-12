@@ -1,0 +1,74 @@
+.banner{
+    height: 256px;
+}
+
+.banner > img{
+    width: calc(100% + 64px);
+    height: 256px;
+    
+    object-fit: cover;
+
+    position: absolute;
+
+    top: -32px;
+    left: -32px;
+
+    /*background-image:
+    linear-gradient(
+        to bottom,
+        transparent,
+    ), url(../img/captura_rotato.png);*/
+}
+
+#tags > h2{
+    display: inline;
+}
+
+.content{
+    display: flex;
+    justify-content: center;
+}
+.project{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 840px;
+}
+
+
+.about_project{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#cover{
+    width: 256px;
+    height: 512px;
+
+    object-fit: cover;
+
+    border-radius: 8px;
+}
+.project > h1{
+    margin-bottom: 32px;
+}
+
+
+.about_project_text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+h2,h3,h4{
+    color: var(--pink-text);
+}
+
+p{
+    margin-bottom: 2em;
+    text-justify:auto;
+}
+strong{
+    color: var(--white-text-highlight);
+}
