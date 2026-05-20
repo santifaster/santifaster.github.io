@@ -1,0 +1,45 @@
+.content{
+    display: flex;
+    justify-content: center;
+}
+
+.about_text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 840px;
+}
+
+h2,h3{
+    margin-top: 32px;
+    margin-bottom: 8px;
+}
+h4{
+    margin-top: 16px;
+    margin-bottom: 4px;
+}
+h2,h3,h4{
+    color: var(--pink-text);
+}
+
+p{
+    margin-bottom: 2em;
+    text-justify:auto;
+}
+strong{
+    color: var(--white-text-highlight);
+}
+
+.image_set{
+    display: flex;
+    justify-content: center;
+    padding: 32px;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.image_set > img{
+    width: auto;
+    max-width: 360px;
+    padding: 1em;
+}

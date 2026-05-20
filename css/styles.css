@@ -15,6 +15,7 @@
     --pink-text: #F92472;
     --white-text-highlight: #dddfe2; 
     
+    --blue-transparent: #44a5c52a;
 
     /* Paddings */
     --top-bar-height: 80px;
@@ -45,7 +46,7 @@ body {
     grid-template-columns: var(--side-bar-width) auto;
 }
 
-@media (width < 768px){
+@media (width < 730px){
     body{
         grid-template-columns: 0vw 100vw;
     }
