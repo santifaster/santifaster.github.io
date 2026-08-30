@@ -53,8 +53,10 @@ body {
     .side_title{
         content-visibility: hidden;
     }
-    .logo{
-        content-visibility: hidden;
+    .logo > a{
+        position: absolute;
+        top: 8px;
+        left: 16px;
     }
     .menu > ul {
         gap: 8px
@@ -64,6 +66,11 @@ body {
     }
     .menu > ul > li > a{
         font-size: 24px;
+    }
+}
+@media (width < 500px) {
+    .logo{
+        content-visibility: hidden;
     }
 }
 
@@ -226,11 +233,11 @@ body {
 .logo{
     align-self: center;
     justify-self: center;
+    margin-top: 16px;
 }
 
 .logo > a > img{    
     width: 64px;   
-    /*display: block;*/
 }
 
 footer{

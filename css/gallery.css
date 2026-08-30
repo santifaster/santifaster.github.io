@@ -25,15 +25,9 @@ h2{
     width:80vw;
 }
 
-.slider > figure > video{
-    max-width: 600px;
-    width:80vw;
-    border-radius: 16px;
-}
-
-.slider > figure > img{
-    max-width: 600px;
-    width:80vw;
+.slider > figure > video, .slider > figure > img{
+    max-height: 360px;
+    height:40vw;
     border-radius: 16px;
 }
 
@@ -50,26 +44,23 @@ h2{
     z-index: 1;
 }
 
+.previous_media, .next_media{
+    display: block;
+    position: absolute;
+    opacity: .4;
+    & > img{
+        aspect-ratio: 16/9;
+        object-fit: cover;
+    }
+    &:hover{
+        cursor: pointer;
+    }
+}
 .previous_media{
-    display: block;
-    position: absolute;
-
     transform: translatex(-40%) scale(.8);
-    opacity: .4;
 }
-.previous_media:hover{
-    cursor: pointer;
-}
-
 .next_media{
-    display: block;
-    position: absolute;
-
     transform: translatex(40%) scale(.8);
-    opacity: .4;
-}
-.next_media:hover{
-    cursor: pointer;
 }
 
 .hidden_image_viewer{
@@ -98,14 +89,17 @@ h2{
     z-index: 2;
     margin: 16px;
     padding: 4px;
-    border-radius: 32px;
-    border-color: var(--main-blue);
+    border-radius: 50%;
+    /* border-color: var(--main-blue); */
+    background-color: var(--black-bg);
+    color: var(--black-bg); /* Overrides link coloring */
     border-width: 4px;
     border-style: solid;
 }
 
 #image_viewer > a:hover{
     background-color: var(--main-blue);
+    color: var(--main-blue);
 }
 
 #image_viewer > img{
