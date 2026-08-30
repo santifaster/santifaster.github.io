@@ -8,6 +8,7 @@
     flex-direction: column;
     justify-content: center;
     max-width: 840px;
+    width: 100%;
 }
 
 h2,h3{
