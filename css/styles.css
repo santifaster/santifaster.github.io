@@ -3,6 +3,24 @@
     src: url(../fonts/Ubuntu-R.ttf);
 }
 
+/* ubuntu-sans-latin-wght-normal */
+@font-face {
+  font-family: 'Ubuntu Sans Variable';
+  font-weight: 100 800;
+  font-style: normal;
+  font-display: swap;
+  src: url(../fonts/UbuntuSans-VariableFont_wdth\,wght.ttf) format('woff2-variations');
+}
+
+/* ubuntu-sans-latin-wght-normal */
+@font-face {
+  font-family: 'Ubuntu Sans Variable';
+  font-weight: 100 800;
+  font-style: italic;
+  font-display: swap;
+  src: url(../fonts/UbuntuSans-Italic-VariableFont_wdth\,wght.ttf) format('woff2-variations');
+}
+
 :root{
     /* Colors */
     --main-pink: #ca054d;
@@ -11,6 +29,7 @@
 
     --dark-black: #18181a;
     --white-text: #b1b2b5;
+    --text-bg: #18181ab4;
     --links: #44A5C5;
     --pink-text: #F92472;
     --white-text-highlight: #dddfe2; 
@@ -26,9 +45,17 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "ubuntu-r";
+    font-family: "Ubuntu Sans Variable";
+    font-weight: 500;
     letter-spacing: 1px;
     color: var(--white-text);
+}
+
+h1,h2,h3{
+    margin: 1em 0 0.8em 0;
+}
+h4,h5,h6{
+    margin: 0.5em 0 0.4em 0;
 }
 
 a {
@@ -184,6 +211,7 @@ body {
 .menu_list{
     letter-spacing: 0.3vw;
     color: var(--white-text);
+    transition-duration: 0.1s;
 }
 
 .menu_list:hover{
@@ -207,6 +235,11 @@ body {
     transform: rotate(180deg);
     writing-mode: vertical-lr;
     font-size: 64px;
+    font-style: italic;
+    font-weight: bold;
+    /* background-color: var(--blue-transparent);
+    transform: skewY(-25deg);
+    padding: 32px; */
 }
 
 /*.anim{
@@ -236,18 +269,24 @@ body {
     margin-top: 16px;
 }
 
+.logo:hover a > img{
+    transform: rotate(10deg);
+    transition-duration: 0.2s;
+}
+
 .logo > a > img{    
     width: 64px;   
+    transition-duration: 0.2s;
 }
 
 footer{
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 64px;
+    padding: 64px 0 32px 0;
     gap: 32px;
-}
 
-footer > a > img{
-    width: 32px;
+    & > a > img{
+        width: 32px;
+    }
 }

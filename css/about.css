@@ -1,6 +1,8 @@
 .content{
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .about_text{
@@ -9,18 +11,19 @@
     justify-content: center;
     max-width: 840px;
     width: 100%;
+    background-color: var(--text-bg);
+    padding: 16px;
+    border-radius: 16px;
+    /* border: 8px solid var(--main-blue); */
 }
 
-h2,h3{
-    margin-top: 32px;
-    margin-bottom: 8px;
+h1{
+    align-self: center;
 }
-h4{
-    margin-top: 16px;
-    margin-bottom: 4px;
-}
+
 h2,h3,h4{
     color: var(--pink-text);
+    font-weight: bold;
 }
 
 p{
@@ -43,4 +46,35 @@ strong{
     width: auto;
     max-width: 360px;
     padding: 1em;
+}
+
+.work-together-button{
+    margin: 32px;
+    text-decoration: none;
+}
+
+.button-content{
+    /* display: flex;
+    align-items: center; */
+
+    font-size: 2em;
+    letter-spacing: 0.3vw;
+    
+    color: var(--white-text);
+    border-bottom: 4px solid var(--white-text);
+    transition-duration: 0.2s;
+    & img{
+        position: relative;
+        bottom: -0.2em;
+
+        height: 1em;
+        /* Text doesn't have margin, so underline it's bigger  */
+        margin: 0 16px 0 6px;
+    }
+}
+
+.button-content:hover{
+    border-bottom: 8px solid var(--main-blue);
+    color: aliceblue;
+    transition-duration: 0.2s;
 }

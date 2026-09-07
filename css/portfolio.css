@@ -6,6 +6,7 @@
 
 .project_list > h2,h3{
     width: min(1024px,100%);
+    margin: 1em 0 0.8em 0;
 }
 
 .game_grid{
@@ -28,23 +29,33 @@
     height: auto;
 }
 
-.cell_title > a {
+.cell_data{
+    margin: 8px 0;
+}
+
+.cell_title {
     color: var(--links);
     font-size: large;
+    font-weight: 700;
+    margin: 8px 0;
     text-decoration: none;
 }
 
 .cell_description {
     color: var(--pink-text);
-    text-decoration: none;
 }
 
 .cell_thumbnail > a > img{
     border-radius: 16px;
     object-fit: cover;
+    transition-duration: 0.2s;
 }
 
-h2,h3{
-    margin-top: 16px;
-    margin-bottom: 8px;
+.game_cell:hover img{
+    transform: translate(-8px, -8px);
+    transition-duration: 0.2s;
+    box-shadow: 8px 8px 0 0 var(--main-pink);
+}
+.game_cell:nth-child(even):hover img{
+    box-shadow: 8px 8px 0 0 var(--main-blue);
 }

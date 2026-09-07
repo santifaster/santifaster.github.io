@@ -1,3 +1,10 @@
+.project{
+    background-color: var(--text-bg);
+    padding: 48px;
+    border-radius: 16px;
+    /* border: 8px solid var(--main-blue); */
+}
+
 h2,h3,h4{
     color: var(--pink-text);
 }
@@ -39,7 +46,8 @@ strong{
         padding: 0.2em 0.6em;
         background-color: var(--blue-transparent);
         color: var(--links);
-        border-radius: 1.2em;    
+        border-radius: 1.2em;  
+        margin: 4px;  
     }
 }
 
